@@ -1,0 +1,125 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+
+</title>
+    <style type="text/css">
+        .style1
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form name="form1" method="post" action="SecureLogin.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTk2MDgzMTgwN2RkJ0XEbahf6BQJr1yo+fKNi86bys8=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/TestCSharp/WebResource.axd?d=tZRuoZnEdrxW_Sx0HOe7tA2&amp;t=633654635319687500" type="text/javascript"></script>
+
+
+<script src="/TestCSharp/WebResource.axd?d=-uynQFUES3zAAqkReoY4Y8ptnjY9EwWkZSfD2UHjCsA1&amp;t=633654635319687500" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBALik/L8CAKl1bK4CQK1qbSRCwKC3IeGDCqvGspn3Igl+RjTvgReYn7ZQrcg" />
+</div>
+    <div class="style1">
+    
+        Enter Username and Password to Log In:<br />
+        <br />
+&nbsp;<span id="Label1" style="font-size: small">Username:</span>
+&nbsp;<input name="txtUsername" type="text" maxlength="25" id="txtUsername" />
+            <span id="rfvUsername" style="color:Red;font-size:Small;visibility:hidden;">Required!</span>
+            <br />
+            <span id="Label2" style="font-size: small">Password:</span>
+&nbsp;&nbsp; <input name="txtPassword" type="password" maxlength="25" id="txtPassword" style="height:22px;" />
+            <span id="rfvPassword" style="color:Red;font-size:Small;visibility:hidden;">Required!</span>
+            <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="submit" name="btnLogin" value="Login" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;btnLogin&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnLogin" style="width:47px;" />
+&nbsp;<br />
+&nbsp;
+        <br />
+    
+    </div>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("rfvUsername"), document.getElementById("rfvPassword"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var rfvUsername = document.all ? document.all["rfvUsername"] : document.getElementById("rfvUsername");
+rfvUsername.controltovalidate = "txtUsername";
+rfvUsername.errormessage = "Required!";
+rfvUsername.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+rfvUsername.initialvalue = "";
+var rfvPassword = document.all ? document.all["rfvPassword"] : document.getElementById("rfvPassword");
+rfvPassword.controltovalidate = "txtPassword";
+rfvPassword.errormessage = "Required!";
+rfvPassword.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+rfvPassword.initialvalue = "";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+</form>
+</body>
+</html>

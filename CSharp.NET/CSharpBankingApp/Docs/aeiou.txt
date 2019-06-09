@@ -1,0 +1,49 @@
+Database Account info:
+Username: user
+Password: user123~!@
+
+Admin Account:
+admin, admin123~!@
+
+
+Turning xp_cmdshell on in Microsoft SQL Server 2005 and 2008 using MS SQL Server Management Studio
+
+
+Open up Query Browser or MS SQL Server Management Studio and log in as SA or another privledged user. Open a new query. Run
+
+sp_configure
+
+Then scroll all the way to the bottom, if xp_cmdshell is there, then skip these 2 steps, otherwise run
+
+sp_configure 'show_advanced_options', 1
+reconfigure with override
+
+Now run the following commands
+
+exec sp_configure xp_cmdshell, 1
+reconfigure with override
+
+Some examples:
+exec master.dbo.xp_cmdshell 'echo Hello World > d:\output.txt'
+
+xp_cmdshell Proxy Account
+When it is called by a user that is not a member of the sysadmin fixed server role, 
+xp_cmdshell connects to Windows by using the account name and password stored in 
+the credential named ##xp_cmdshell_proxy_account##. 
+If this proxy credential does not exist, xp_cmdshell will fail.
+
+The proxy account credential can be created by executing sp_xp_cmdshell_proxy_account. 
+As arguments, this stored procedure takes a Windows user name and password. 
+For example, the following command creates a proxy credential for Windows domain user SHIPPING\KobeR that has the Windows password sdfh%dkc93vcMt0.
+
+EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0'
+
+
+XSS Cheat Sheets:
+<iframe src=http://ha.ckers.org/scriptlet.html <
+
+User Accounts:
+admin, ramb
+admin1, Admin12345 (hashed)
+ramb, ramb (plain)
+rambasnet, Rambasnet123 (hashed)
